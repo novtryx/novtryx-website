@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 
@@ -10,25 +10,13 @@ const Header = () => {
   const navArray = ["Home", "About", "Our Work", "Contact"];
   const [open, setOpen] = useState(false);
 
-  // Prevent scroll when menu is open
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [open]);
-
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-linear-to-b from-[#A1FFFF]/60 via-[#A1FFFF]/40 to-white">
       <div className="flex items-center justify-between px-6 md:px-16 py-4">
         {/* LOGO */}
         <motion.div
           whileHover={{ scale: 1.03 }}
-          className="flex items-center gap-2 cursor-default"
+          className="flex items-center gap-2"
         >
           <div className="bg-[#008080] w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-md">
             <Image src="/logo.svg" alt="novtryx" height={26} width={31} />
@@ -65,59 +53,41 @@ const Header = () => {
         </motion.div>
 
         {/* MOBILE MENU BUTTON */}
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-[#008080] z-[60]"
+        <button
+          onClick={() => setOpen(true)}
+          className="md:hidden text-[#008080]"
         >
-          <AnimatePresence mode="wait">
-            {open ? (
-              <motion.div
-                key="close"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <HiX size={28} />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="menu"
-                initial={{ rotate: 90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: -90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <HiOutlineMenuAlt3 size={28} />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.button>
+          <HiOutlineMenuAlt3 size={28} />
+        </button>
       </div>
 
       {/* MOBILE MENU */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-            className="md:hidden overflow-hidden bg-white/95 backdrop-blur-xl border-t border-gray-100"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden bg-white border-t shadow-lg"
           >
-            <nav className="px-6 py-6 space-y-1">
-              {navArray.map((item, index) => (
+            <div className="flex items-center justify-between px-6 py-4">
+              <p className="font-medium">Menu</p>
+              <button onClick={() => setOpen(false)}>
+                <HiX size={24} />
+              </button>
+            </div>
+
+            <nav className="flex flex-col gap-4 px-6 pb-6">
+              {navArray.map((item) => (
                 <motion.div
                   key={item}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05, duration: 0.3 }}
+                  whileTap={{ scale: 0.97 }}
+                  onClick={() => setOpen(false)}
                 >
                   <Link
                     href="#"
-                    onClick={() => setOpen(false)}
-                    className="block px-4 py-3 text-lg text-gray-700 rounded-lg hover:bg-[#008080]/5 hover:text-[#008080] transition-colors"
+                    className="block py-2 text-lg border-b"
                   >
                     {item}
                   </Link>
@@ -125,25 +95,18 @@ const Header = () => {
               ))}
 
               <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.3 }}
-                className="pt-4"
+                whileTap={{ scale: 0.95 }}
+                className="mt-4 flex items-center gap-2"
               >
-                <Link
-                  href="#"
-                  className="flex items-center gap-3 px-4 py-3 bg-[#008080] text-white rounded-lg hover:bg-[#006666] transition-colors"
-                >
-                  <div className="relative w-5 h-5">
-                    <Image
-                      src="/whatsapp.svg"
-                      alt="whatsapp"
-                      fill
-                      className="object-contain brightness-0 invert"
-                    />
-                  </div>
-                  <span className="font-medium">Contact us</span>
-                </Link>
+                <div className="relative w-10 h-10">
+                  <Image
+                    src="/whatsapp.svg"
+                    alt="whatsapp"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <span>Chat with us</span>
               </motion.div>
             </nav>
           </motion.div>
