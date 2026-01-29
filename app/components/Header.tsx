@@ -51,11 +51,11 @@ const Header = () => {
         {navArray.map((item) => (
           <motion.div
             key={item.name}
-            whileHover={{ scale: 1.08, y: -2 }}
+            whileHover={{ scale: 1.05, y: -1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}
           >
-            <Link href={item.link} className="font-medium">
+            <Link href={item.link} className="font-medium hover:border-b pb-2 hover:border-white">
               {item.name}
             </Link>
           </motion.div>
