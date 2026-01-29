@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 
 const Mission = () => {
   return (
-    <div className='px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 flex flex-col lg:flex-row py-8 sm:py-10 md:py-12 gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24'>
+    <div id="about" className='px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 flex flex-col-reverse lg:flex-row py-8 sm:py-10 md:py-12 gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24'>
         <motion.div 
-          className='relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-162.25 w-full lg:w-[40%] rounded-3xl'
+          className='relative h-75 sm:h-100 md:h-125 lg:h-162.25 w-full lg:w-[40%] rounded-3xl'
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}

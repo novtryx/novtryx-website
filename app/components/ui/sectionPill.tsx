@@ -22,7 +22,7 @@ const SectionPill = ({ text, position, title, subTitle, subTitleColor }: pillTyp
             {
                 text?.trim() &&
                 <motion.div 
-                    className='text-[#008080] bg-[#E8FFFF] w-fit px-3 py-2 border-2 border-[#008080] rounded-full flex gap-1 items-center justify-center'
+                    className='text-[#008080] bg-[#E8FFFF] w-fit px-4 py-2 border-2 border-[#008080] rounded-full flex gap-1 items-center justify-center'
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
