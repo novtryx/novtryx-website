@@ -9,6 +9,7 @@ import { LiaToolsSolid } from 'react-icons/lia'
 import { LuChartNoAxesCombined, LuShieldCheck } from 'react-icons/lu'
 import { GrPowerCycle } from 'react-icons/gr'
 import { PiRocketLaunch } from 'react-icons/pi'
+import { motion } from 'framer-motion'
 
 
 interface HowWeBuildArrayType{
@@ -60,31 +61,65 @@ const HowWeBuild = () => {
     },
 
   ]
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  }
+
   return (
-    <div className='px-24 py-12 flex flex-col items-center gap-17.5'>
-         <div className='w-[65%] '>
+    <div className='px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-8 sm:py-10 md:py-12 flex flex-col items-center gap-12 sm:gap-14 md:gap-16 lg:gap-17.5'>
+         <motion.div 
+            className='w-full sm:w-[85%] md:w-[75%] lg:w-[65%]'
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+         >
             <SectionPill 
                 text='How We Build'
                 title='Our Proven Product Development Process.'
                 subTitle='A structured, end-to-end approach that takes your idea from discovery to launch — and supports you as your product scales.'
             />
+        </motion.div>
 
-        </div>
-
-        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 w-full gap-2.5'>
+        <motion.div 
+          className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  w-full gap-2 sm:gap-2.5'
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {
             howWeBuildArray.map((item: HowWeBuildArrayType, index:number) => (
-              <BuildCard
+              <motion.div
                 key={index}
-                title={item.title}
-                subTitle={item.subTitle}
-                Icon={item.icon}
-                index={index + 1}
-              />
-
+                variants={itemVariants}
+              >
+                <BuildCard
+                  title={item.title}
+                  subTitle={item.subTitle}
+                  Icon={item.icon}
+                  index={index + 1}
+                />
+              </motion.div>
             ))
           }
-        </div>
+        </motion.div>
     </div>
   )
 }

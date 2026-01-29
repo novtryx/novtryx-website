@@ -1,17 +1,50 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
 import QuoteButton from './ui/QuoteButton'
+import { motion } from 'framer-motion'
 
 const Hero = () => {
   return (
-    <div className='w-full  pt-12'>
-      <div className='h-fit w-full relative flex items-center flex-col text-center  gap-10'>
-        <div className='w-[65%] flex flex-col items-center gap-4'>
-          <h3 className='text-[71px] tracking-tighter leading-19.25'>End-to-end product development for <span className=''>modern</span> businesses</h3>
-          <p className='text-[20px] w-[60%]'>Novtryx helps startups and enterprises design, build, and launch high-performance software — from idea to production.</p>
-          <QuoteButton />
-        </div>
-        <div className="h-95.25 w-230.25 relative  ">
+    <div className='w-full pt-6 sm:pt-8 md:pt-12'>
+      <div className='h-fit w-full relative flex items-center flex-col text-center gap-6 sm:gap-8 md:gap-10'>
+        <motion.div 
+          className='w-[95%] sm:w-[85%] md:w-[75%] lg:w-[65%] flex flex-col items-center gap-3 sm:gap-4 px-4'
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.h3 
+            className='text-[32px] sm:text-[44px] md:text-[56px] lg:text-[71px] tracking-tighter leading-tight sm:leading-snug'
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            End-to-end product development for <span className=''>modern</span> businesses
+          </motion.h3>
+          <motion.p 
+            className='text-[16px] sm:text-[18px] md:text-[20px] w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%]'
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Novtryx helps startups and enterprises design, build, and launch high-performance software — from idea to production.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <QuoteButton />
+          </motion.div>
+        </motion.div>
+
+        <motion.div 
+          className="h-[300px] w-full sm:h-[400px] sm:w-[600px] md:h-[500px] md:w-[750px] lg:h-95.25 lg:w-230.25 relative"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
           <Image
             src="/updated-hero.svg"
             alt="hero"
@@ -19,21 +52,40 @@ const Hero = () => {
             className="object-cover absolute inset-0"
           />
 
-          <div className='h-full w-full flex justify-center -z-10   '>
-            <div className='h-[80%] w-[80%] bg-[#A1FFFF] -z-10  blur-3xl rounded-t-full'></div>
+          <motion.div 
+            className='h-full w-full flex justify-center -z-10'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+          >
+            <motion.div 
+              className='h-[80%] w-[80%] bg-[#A1FFFF] -z-10 blur-3xl rounded-t-full'
+              animate={{ 
+                scale: [1, 1.05, 1],
+              }}
+              transition={{ 
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+          </motion.div>
+        </motion.div>
 
-          </div>
-        </div>
-        <div className="grid grid-cols-7  w-[70%] h-full absolute -z-20 bg-linear-to-t from-[#026868]/60 to-white gap-px">
-          <div className="   bg-white"></div>
-          <div className="   bg-white"></div>
-          <div className="   bg-white"></div>
-          <div className="   bg-white"></div>
-          <div className="   bg-white"></div>
-          <div className="   bg-white"></div>
-          <div className="   bg-white"></div>
-
-        </div>
+        <motion.div 
+          className="grid grid-cols-7 w-[90%] sm:w-[80%] md:w-[75%] lg:w-[70%] h-full absolute -z-20 bg-linear-to-t from-[#026868]/60 to-white gap-px"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="bg-white"></div>
+          <div className="bg-white"></div>
+          <div className="bg-white"></div>
+          <div className="bg-white"></div>
+          <div className="bg-white"></div>
+          <div className="bg-white"></div>
+          <div className="bg-white"></div>
+        </motion.div>
 
       </div>
     </div>
