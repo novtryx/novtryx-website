@@ -18,16 +18,16 @@ const Header = () => {
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="py-4 sm:py-5 md:py-6 backdrop-blur-md bg-linear-to-b from-[#A1FFFF]/60 via-[#A1FFFF]/40 to-white flex px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 justify-between items-center sticky top-0 z-50">
+    <div className="py-4 sm:py-5 md:py-6 backdrop-blur-md bg-linear-to-b from-[#A1FFFF]/60 via-[#A1FFFF]/40 to-white flex px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 justify-between items-center sticky top-0 z-1000">
       {/* Logo */}
       <motion.div
-        className="flex items-center gap-1.5 sm:gap-2"
+        className="flex items-center gap-1.5 sm:gap-2 z-1000"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         whileHover={{ scale: 1.02 }}
       >
-        <div className="bg-[#008080] w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 flex items-center justify-center rounded-md">
+        <div className="bg-[#008080] w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 flex items-center justify-center rounded-md z-1000">
           <Image
             src={"/logo.svg"}
             alt="novtryx"
