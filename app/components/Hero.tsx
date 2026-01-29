@@ -40,7 +40,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div 
-          className="h-[300px] w-full sm:h-[400px] sm:w-[600px] md:h-[500px] md:w-[750px] lg:h-95.25 lg:w-230.25 relative"
+          className="h-[300px] w-full   md:h-[500px] md:w-[750px] lg:h-95.25 lg:w-230.25 relative"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -49,6 +49,7 @@ const Hero = () => {
             src="/updated-hero.svg"
             alt="hero"
             fill
+            
             className="object-cover absolute inset-0"
           />
 
