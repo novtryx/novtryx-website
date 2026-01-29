@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+* {
+  scroll-behavior: smooth!important;
+}
 
 body {
   background: white;
@@ -8,3 +10,5 @@ body {
 button{
   @apply cursor-pointer
 }
+
+

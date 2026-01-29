@@ -8,7 +8,7 @@ import BuiltSolutions from "./components/BuiltSolutions";
 
 export default function Home() {
   return (
-  <div className="max-w-screen overflow-x-hidden">
+  <div>
     <Hero/>
     <Mission/>
     <Services/>
