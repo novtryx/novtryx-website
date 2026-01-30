@@ -13,9 +13,27 @@ interface BuildCardProps {
 
 const BuildCard = ({ Icon, title, subTitle, index }: BuildCardProps) => {
   return (
+    // <motion.div
+    //   initial="rest"
+    //   whileHover="hover"
+    //   animate="rest"
+    //   variants={{
+    //     rest: {
+    //       backgroundColor: "#ffffff",
+    //       color: "#151515",
+    //     },
+    //     hover: {
+    //       backgroundColor: "#151515",
+    //       color: "#ffffff",
+    //     },
+    //   }}
+    //   transition={{ duration: 0.35, ease: "easeOut" }}
+    //   className="h-fit md:h-71.25 w-full rounded-2xl px-7 py-6 flex flex-col gap-10 border border-[#DBDBDB]"
+    // >
     <motion.div
       initial="rest"
       whileHover="hover"
+      whileTap="hover" // Triggers on tap for mobile
       animate="rest"
       variants={{
         rest: {
@@ -70,7 +88,6 @@ const BuildCard = ({ Icon, title, subTitle, index }: BuildCardProps) => {
         >
           {index}
         </motion.h1>
-
       </div>
 
       <div className="space-y-1">
