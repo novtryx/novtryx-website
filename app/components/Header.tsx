@@ -18,7 +18,7 @@ const Header = () => {
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="py-4 sm:py-5 md:py-6 backdrop-blur-md bg-linear-to-b from-[#A1FFFF]/60 via-[#A1FFFF]/40 to-white flex px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 justify-between items-center sticky top-0 z-50">
+    <div className="py-4 sm:py-5 md:py-6 backdrop-blur-none lg:backdrop-blur-md bg-linear-to-b from-[#a1ffff] lg:from-[#A1FFFF]/60 via-[#a1ffff] lg:via-[#A1FFFF]/40 to-white flex px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 justify-between items-center sticky top-0 z-50">
       {/* Logo */}
       <motion.div
         className="flex items-center gap-1.5 sm:gap-2 z-1000"
