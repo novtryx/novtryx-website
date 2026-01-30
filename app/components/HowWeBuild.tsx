@@ -27,7 +27,7 @@ const HowWeBuild = () => {
      {
       icon: IoMapOutline,
       title: "Strategy & Road-mapping",
-      subTitle: "We translate insights into a clear execution plan — defining scope, milestones, timelines, and success metrics."
+      subTitle: "We translate insights into a clear execution plan - defining scope, milestones, timelines, and success metrics."
     },
      {
       icon: HiSquare3Stack3D,
@@ -93,7 +93,7 @@ const HowWeBuild = () => {
             <SectionPill 
                 text='How We Build'
                 title='Our Proven Product Development Process.'
-                subTitle='A structured, end-to-end approach that takes your idea from discovery to launch — and supports you as your product scales.'
+                subTitle='A structured, end-to-end approach that takes your idea from discovery to launch and supports you as your product scales.'
             />
         </motion.div>
 
