@@ -37,8 +37,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Novtryx helps startups and enterprises design, build, and launch
-            high-performance software — from idea to production.
+            Novtryx helps startups, businesses, and enterprises design, build, and launch
+            high-performance software from idea to production.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}

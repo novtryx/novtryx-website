@@ -28,7 +28,7 @@ const Mission = () => {
                 text="Our Mission" 
                 position="left" 
                 title="Dedicated to Building technology that works for your business" 
-                subTitle="We turn complex business problems into scalable digital products Through strategy, design, and engineering;  from idea to growth."
+                subTitle="We turn complex business problems into scalable digital products through strategy, design, and engineering;  from idea to growth."
             />
 
             <ReviewSection />

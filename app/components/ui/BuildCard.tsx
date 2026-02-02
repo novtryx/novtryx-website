@@ -16,6 +16,7 @@ const BuildCard = ({ Icon, title, subTitle, index }: BuildCardProps) => {
     <motion.div
       initial="rest"
       whileHover="hover"
+      whileTap="hover"
       animate="rest"
       variants={{
         rest: {
@@ -28,7 +29,7 @@ const BuildCard = ({ Icon, title, subTitle, index }: BuildCardProps) => {
         },
       }}
       transition={{ duration: 0.35, ease: "easeOut" }}
-      className="h-fit md:h-71.25 w-full rounded-2xl px-7 py-6 flex flex-col gap-10 border border-[#DBDBDB]"
+      className="h-fit md:h-71.25 w-full rounded-2xl px-7 py-6 flex flex-col gap-10 border border-[#DBDBDB] select-none"
     >
       <div className="flex items-center justify-between">
         {/* Icon */}
@@ -70,7 +71,6 @@ const BuildCard = ({ Icon, title, subTitle, index }: BuildCardProps) => {
         >
           {index}
         </motion.h1>
-
       </div>
 
       <div className="space-y-1">
