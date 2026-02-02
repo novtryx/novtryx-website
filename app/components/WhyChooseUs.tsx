@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 const WhyChooseUs = () => {
   return (
-    <div className='py-8 sm:py-10 md:py-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 bg-[#113F3F]/5 space-y-12 sm:space-y-14 md:space-y-16 lg:space-y-18 w-full overflow-x-hidden'>
+    <div  className='py-8 sm:py-10 md:py-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 bg-[#113F3F]/5 space-y-12 sm:space-y-14 md:space-y-16 lg:space-y-18 w-full overflow-x-hidden'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8'>
             <motion.div 
               className='col-span-1 lg:col-span-2'

@@ -14,7 +14,7 @@ export default function Home() {
     <Services/>
     <HowWeBuild/>
     <WhyChooseUs/>
-    <BuiltSolutions/>
+    {/* <BuiltSolutions/> */}
   </div>
   );
 }

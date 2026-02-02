@@ -9,7 +9,7 @@ const Header = () => {
   const navArray = [
     { name: "Home", link: "#" },
     { name: "About", link: "#about" },
-    { name: "Our Work", link: "#work" },
+    { name: "Our Services", link: "#services" },
   ];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

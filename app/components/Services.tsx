@@ -52,7 +52,7 @@ const Services = () => {
     }
 
   return (
-    <div className='flex flex-col items-center py-8 sm:py-10 md:py-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 gap-12 sm:gap-14 md:gap-16 lg:gap-17.5'>
+    <div id="services" className='flex flex-col items-center py-8 sm:py-10 md:py-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 gap-12 sm:gap-14 md:gap-16 lg:gap-17.5'>
         <motion.div 
             className='w-full sm:w-[85%] md:w-[75%] lg:w-[65%]'
             initial={{ opacity: 0, y: 40 }}

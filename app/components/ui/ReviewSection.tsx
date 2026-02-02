@@ -5,29 +5,29 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const reviews = [
   {
-    name: "David Michael",
-    role: "CEO - Glorywrist Watch",
+    name: "Gideon Kyle",
+    role: "CEO - June9 Realty",
     review:
       "Novtryx is just the last bus stop. Very fast in delivery projects and I love their working team. They delivered even more than expected.",
   },
   {
-    name: "Sarah Johnson",
-    role: "Product Manager - TechFlow",
+    name: "Adrian samuel",
+    role: "Founder - deCave MGT",
     review:
       "Professional, efficient, and extremely reliable. Communication was smooth and delivery was right on time.",
   },
   {
-    name: "Ibrahim Musa",
-    role: "Founder - PayWave Africa",
+    name: "Christian Obioma",
+    role: "Branch Manager - BUA",
     review:
       "Their attention to detail and understanding of our needs was outstanding. Highly recommended team.",
   },
-  {
-    name: "Amaka Okoye",
-    role: "Marketing Lead - BrandHaus",
-    review:
-      "Working with Novtryx felt effortless. They exceeded expectations and delivered real value.",
-  },
+  // {
+  //   name: "Amaka Okoye",
+  //   role: "Marketing Lead - BrandHaus",
+  //   review:
+  //     "Working with Novtryx felt effortless. They exceeded expectations and delivered real value.",
+  // },
 ]
 
 const AUTO_SLIDE_INTERVAL = 4000 // 4 seconds

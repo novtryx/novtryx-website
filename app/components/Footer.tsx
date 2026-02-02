@@ -31,8 +31,8 @@ const Footer = () => {
       link: "#about",
     },
     {
-      title: "Our Work",
-      link: "#work",
+      title: "Our Services",
+      link: "#services",
     },
   ];
   const socialLinkArray: SocialLinkArrayType[] = [
@@ -42,19 +42,19 @@ const Footer = () => {
       title: "whatsapp",
     },
     {
-      link: "/",
+      link: "https://x.com/novtryx",
       icon: BsTwitterX,
     },
+    // {
+    //   link: "/",
+    //   icon: FiFacebook,
+    // },
     {
-      link: "/",
-      icon: FiFacebook,
-    },
-    {
-      link: "/",
+      link: "https://www.linkedin.com/company/110894398",
       icon: FiLinkedin,
     },
     {
-      link: "/",
+      link: "https://www.instagram.com/novtryx",
       icon: AiOutlineInstagram,
     },
   ];
