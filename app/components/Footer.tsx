@@ -17,6 +17,7 @@ interface SocialLinkArrayType {
 }
 const Footer = () => {
   const phone = "2349061143236";
+  const fullYear = new Date().getFullYear();
   const message =
     "Hello Novtryx Solutions👋 I'm looking to build a web or mobile application and would like to discuss how your team can help.";
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
@@ -154,7 +155,7 @@ const Footer = () => {
         transition={{ duration: 0.7, delay: 0.4 }}
       >
         <p className="text-[#B3B3B3] text-[13px] sm:text-[14px] md:text-[15px]">
-          © 2026 Novtryx. All rights reserved.
+          © {fullYear} Novtryx. All rights reserved.
         </p>
       </motion.div>
     </div>

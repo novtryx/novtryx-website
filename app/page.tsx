@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Hero from "./components/Hero";
 import Mission from "./components/Mission";
 import Services from "./components/Services";
@@ -14,7 +13,7 @@ export default function Home() {
     <Services/>
     <HowWeBuild/>
     <WhyChooseUs/>
-    {/* <BuiltSolutions/> */}
+    <BuiltSolutions/>
   </div>
   );
 }
