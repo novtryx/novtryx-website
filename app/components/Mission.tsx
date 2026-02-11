@@ -1,4 +1,5 @@
 "use client"
+
 import Image from "next/image";
 import SectionPill from './ui/sectionPill';
 import ReviewSection from "./ui/ReviewSection";
